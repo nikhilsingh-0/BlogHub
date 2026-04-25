@@ -67,8 +67,8 @@ The main configuration file is `src/main/resources/application.yml`.
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/blog_hub
-    username: springstudent
-    password: springstudent
+    username: username
+    password: password
   elasticsearch:
     uris: http://localhost:9200
   jpa:
