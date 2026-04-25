@@ -12,7 +12,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 @RestController
@@ -21,9 +23,9 @@ public class PostController {
     @Autowired
     PostService service;
 
-    @PostMapping(value = "/posts/{categoryId}/{userId}",consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public ResponseEntity<PostDTO> createPost(@Valid @RequestPart PostDTO postDTO, @PathVariable Long userId, @PathVariable Long categoryId, @RequestPart("image") MultipartFile image) throws IOException {
-        PostDTO post = service.createPost(postDTO,userId,categoryId,image);
+    @PostMapping(value = "/posts/{categoryId}/{userId}")
+    public ResponseEntity<PostDTO> createPost(@Valid @RequestBody PostDTO postDTO, @PathVariable Long userId, @PathVariable Long categoryId) throws IOException {
+        PostDTO post = service.createPost(postDTO,userId,categoryId);
         return new ResponseEntity<>(post, HttpStatus.CREATED);
     }
 

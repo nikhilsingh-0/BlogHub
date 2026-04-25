@@ -1,14 +1,9 @@
-package com.example.Blog.Hub.service;
+package com.example.Blog.Hub.service.impl;
 
 import com.example.Blog.Hub.dto.UserDTO;
-import com.example.Blog.Hub.entity.User;
 import com.example.Blog.Hub.utills.SecurityConstants;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
-import org.hibernate.annotations.CurrentTimestamp;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import javax.crypto.SecretKey;

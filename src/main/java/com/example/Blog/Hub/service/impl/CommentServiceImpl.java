@@ -1,4 +1,4 @@
-package com.example.Blog.Hub.service;
+package com.example.Blog.Hub.service.impl;
 
 import com.example.Blog.Hub.dto.CommentDTO;
 import com.example.Blog.Hub.entity.Comment;
@@ -8,6 +8,7 @@ import com.example.Blog.Hub.exception.UserNotFoundException;
 import com.example.Blog.Hub.repository.CommentRepository;
 import com.example.Blog.Hub.repository.PostRepository;
 import com.example.Blog.Hub.repository.UserRepository;
+import com.example.Blog.Hub.service.CommentService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -20,7 +21,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class CommentServiceImpl implements CommentService{
+public class CommentServiceImpl implements CommentService {
 
     @Autowired
     CommentRepository repository;

@@ -1,14 +1,15 @@
-package com.example.Blog.Hub.service;
+package com.example.Blog.Hub.service.impl;
 
 import com.example.Blog.Hub.dto.UserDTO;
 import com.example.Blog.Hub.entity.Post;
 import com.example.Blog.Hub.entity.User;
 import com.example.Blog.Hub.exception.UserNotFoundException;
 import com.example.Blog.Hub.repository.UserRepository;
+import com.example.Blog.Hub.service.FileService;
+import com.example.Blog.Hub.service.UserService;
 import com.example.Blog.Hub.utills.ImageConstants;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -18,7 +19,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserRepository repository;

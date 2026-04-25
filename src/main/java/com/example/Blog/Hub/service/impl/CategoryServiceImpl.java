@@ -1,8 +1,9 @@
-package com.example.Blog.Hub.service;
+package com.example.Blog.Hub.service.impl;
 
 import com.example.Blog.Hub.dto.CategoryDTO;
 import com.example.Blog.Hub.entity.Category;
 import com.example.Blog.Hub.repository.CategoryRepository;
+import com.example.Blog.Hub.service.CategoryService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,7 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class CategoryServiceImpl implements CategoryService{
+public class CategoryServiceImpl implements CategoryService {
 
     @Autowired
     CategoryRepository repository;

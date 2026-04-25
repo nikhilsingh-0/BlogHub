@@ -47,13 +47,14 @@ public class SecurityConfig {
                 .csrf(csrf-> csrf.disable())
                 .addFilterBefore(new JWTTokenValidationFilter(),BasicAuthenticationFilter.class)
                 .authorizeHttpRequests(requests ->requests
-//                        .requestMatchers(AUTH_WHITELIST).permitAll()
-                        .requestMatchers("/user","/user/**").authenticated()
-                        .requestMatchers(HttpMethod.POST,"/post/**","posts/**").authenticated()
-                        .requestMatchers(HttpMethod.GET,"/post/**","posts/**").permitAll()
-                        .requestMatchers(HttpMethod.PUT,"posts/**").authenticated()
-                        .requestMatchers(HttpMethod.DELETE,"posts/**").authenticated()
-                        .requestMatchers("/register","/login","/forgetPassword","/resetPassword","/image/**","category/**").permitAll())
+                        .requestMatchers(AUTH_WHITELIST).permitAll()
+                        .requestMatchers("/user","/user/**").permitAll()
+                        .requestMatchers(HttpMethod.POST,"/post/**","/posts/**").permitAll()
+                        .requestMatchers(HttpMethod.GET,"/post/**","/posts/**").permitAll()
+                        .requestMatchers(HttpMethod.PUT,"/posts/**").permitAll()
+                        .requestMatchers(HttpMethod.DELETE,"/posts/**").authenticated()
+                        .requestMatchers("/register","/login","/forgetPassword","/resetPassword","/image/**","category/**").permitAll()
+                        .anyRequest().permitAll())
 //                .formLogin(Customizer.withDefaults())
                 .httpBasic(Customizer.withDefaults());
 

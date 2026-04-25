@@ -1,4 +1,4 @@
-package com.example.Blog.Hub.service;
+package com.example.Blog.Hub.service.impl;
 
 import com.example.Blog.Hub.entity.Like;
 import com.example.Blog.Hub.entity.Post;
@@ -6,6 +6,7 @@ import com.example.Blog.Hub.entity.User;
 import com.example.Blog.Hub.repository.LikeRepository;
 import com.example.Blog.Hub.repository.PostRepository;
 import com.example.Blog.Hub.repository.UserRepository;
+import com.example.Blog.Hub.service.LikeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -14,7 +15,7 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 @Service
-public class LikeServiceImpl implements LikeService{
+public class LikeServiceImpl implements LikeService {
 
     @Autowired
     private LikeRepository likeRepository;

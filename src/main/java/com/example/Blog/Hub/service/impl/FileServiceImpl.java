@@ -1,5 +1,6 @@
-package com.example.Blog.Hub.service;
+package com.example.Blog.Hub.service.impl;
 
+import com.example.Blog.Hub.service.FileService;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 

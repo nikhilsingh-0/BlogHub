@@ -10,10 +10,10 @@ import java.util.List;
 @Getter
 @Setter
 public class PostResponse {
-    int pageNumber;
-    int pageSize;
-    int totalElement;
-    int totalPages;
-    boolean lastPages;
-    List<PostDTO> content;
+    private int pageNumber;
+    private int pageSize;
+    private int totalElement;
+    private int totalPages;
+    private boolean lastPages;
+    private List<PostDTO> content;
 }
